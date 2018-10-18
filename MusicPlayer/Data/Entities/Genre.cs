@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.Data.Entities
 {
-    public class Genre
+    public class Genre : BaseEntity
     {
         public string GenreName { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }

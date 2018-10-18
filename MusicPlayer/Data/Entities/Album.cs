@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.Data.Entities
 {
-    public class Album
+    public class Album : BaseEntity
     {
         public string AlbumName { get; set; }
-        public string GenreId { get; set; }
-        public string AuthorId { get; set; }
+        public int GenreId { get; set; }
+        public int AuthorId { get; set; }
+        public virtual Author Author { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }
