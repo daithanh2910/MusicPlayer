@@ -18,7 +18,6 @@ C:\Users\User\Desktop\music\MusicPlayer\bin\Debug\netcoreapp2.1\MusicPlayer.runt
 C:\Users\User\Desktop\music\MusicPlayer\bin\Debug\netcoreapp2.1\MusicPlayer.runtimeconfig.dev.json
 C:\Users\User\Desktop\music\MusicPlayer\bin\Debug\netcoreapp2.1\MusicPlayer.dll
 C:\Users\User\Desktop\music\MusicPlayer\bin\Debug\netcoreapp2.1\MusicPlayer.pdb
-C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.csprojAssemblyReference.cache
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.RazorAssemblyInfo.cache
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.RazorAssemblyInfo.cs
@@ -28,3 +27,4 @@ C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.Razo
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.dll
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.pdb
 C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\User\Desktop\music\MusicPlayer\obj\Debug\netcoreapp2.1\MusicPlayer.csprojAssemblyReference.cache

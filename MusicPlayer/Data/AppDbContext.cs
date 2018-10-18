@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MusicPlayer.Data.Entities;
+using MusicPlayer.Data.Migrations.Seeder;
 
 namespace MusicPlayer.Data
 {
@@ -17,5 +18,12 @@ namespace MusicPlayer.Data
         public DbSet<Song> Songs { get; set; }
         public DbSet<SongAlbum> SongAlbums { get; set; }
         public DbSet<User> Users { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.HasSequence<int>("SeqId");
+           // modelBuilder.ForSqlServerUseIdentityColumns();
+            modelBuilder.Seed();
+        }
     }
 }

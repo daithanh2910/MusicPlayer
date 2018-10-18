@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.AzureADB2C.UI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MusicPlayer.Data;
 using Microsoft.EntityFrameworkCore;
+using MusicPlayer.Interfaces;
+using MusicPlayer.Implementations;
 
 namespace MusicPlayer
 {
@@ -25,8 +25,10 @@ namespace MusicPlayer
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MusicPlayerConnectionString")));
 
-            services.AddAuthentication(AzureADB2CDefaults.BearerAuthenticationScheme)
-                .AddAzureADB2CBearer(options => Configuration.Bind("AzureAdB2C", options));            
+            //services.AddAuthentication(AzureADB2CDefaults.BearerAuthenticationScheme)
+            //    .AddAzureADB2CBearer(options => Configuration.Bind("AzureAdB2C", options));   
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

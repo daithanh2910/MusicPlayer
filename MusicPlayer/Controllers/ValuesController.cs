@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MusicPlayer.Data;
+using MusicPlayer.Data.Entities;
 
 namespace MusicPlayer.Controllers
 {
@@ -11,6 +13,12 @@ namespace MusicPlayer.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public ValuesController(AppDbContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

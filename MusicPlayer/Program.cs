@@ -25,8 +25,8 @@ namespace MusicPlayer
         private static void SetupConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
         {
             builder.Sources.Clear();
-            builder.AddJsonFile("config.json", false, true)
-                .AddEnvironmentVariables();
+            builder.AddJsonFile("config.json", false, true);
+                //.AddEnvironmentVariables();
         }
     }
 }

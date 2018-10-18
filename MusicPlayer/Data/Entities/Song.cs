@@ -22,6 +22,6 @@ namespace MusicPlayer.Data.Entities
         public virtual Genre Genre { get; set; }
 
         public virtual Singer Singer { get; set; }
-        public virtual ICollection<Album> Albums { get; set; }
+        public virtual ICollection<SongAlbum> SongAlbums { get; set; }
     }
 }

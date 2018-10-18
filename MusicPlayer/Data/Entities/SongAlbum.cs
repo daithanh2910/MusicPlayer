@@ -9,7 +9,7 @@ namespace MusicPlayer.Data.Entities
     {
         public int SongId { get; set; }
         public int AlbumId { get; set; }
-        public virtual ICollection<Song> Songs { get; set; }
-        public virtual ICollection<Album> Albums { get; set; }
+        public virtual Song Song { get; set; }
+        public virtual Album Album { get; set; }
     }
 }

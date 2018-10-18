@@ -11,6 +11,6 @@ namespace MusicPlayer.Data.Entities
         public int GenreId { get; set; }
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }
-        public virtual ICollection<Song> Songs { get; set; }
+        public virtual ICollection<SongAlbum> SongAlbums { get; set; }
     }
 }
