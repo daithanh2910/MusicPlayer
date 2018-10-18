@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.Data.Entities
 {
-    public class SongAlbum
+    public class SongAlbum : BaseEntity
     {
         public int SongId { get; set; }
         public int AlbumId { get; set; }

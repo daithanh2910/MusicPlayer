@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "MusicPlayerConnectionString": "server=(localdb)\\ProjectsV13;Database=MusicPalyer; Integrated Security=true; MultipleActiveResultSets = true;"
+  }
+}
