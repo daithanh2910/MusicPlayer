@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MusicPlayer.Data;
 using Microsoft.EntityFrameworkCore;
-using MusicPlayer.Interfaces;
-using MusicPlayer.Implementations;
+using Repository;
 
-namespace MusicPlayer
+namespace WebApplication
 {
     public class Startup
     {
@@ -23,12 +21,12 @@ namespace MusicPlayer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("MusicPlayerConnectionString")));
+                options.UseSqlServer(Configuration.GetConnectionString("MusicPlayerConnectionString"), builder => builder.MigrationsAssembly(typeof(Startup).Assembly.FullName)));
 
             //services.AddAuthentication(AzureADB2CDefaults.BearerAuthenticationScheme)
             //    .AddAzureADB2CBearer(options => Configuration.Bind("AzureAdB2C", options));   
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

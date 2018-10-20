@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MusicPlayer.Data;
+using Repository;
 
-namespace MusicPlayer.Migrations
+namespace WebApplication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace MusicPlayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Album", b =>
+            modelBuilder.Entity("Repository.Entities.Album", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -44,9 +44,14 @@ namespace MusicPlayer.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("Albums");
+
+                    b.HasData(
+                        new { Id = 1, AlbumName = "Thằng điên", AuthorId = 1, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("09cf3129-ff68-4ef4-a87b-26907e3d9d06") },
+                        new { Id = 2, AlbumName = "Girl like you", AuthorId = 2, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 2, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("9e7567f5-d3ef-48be-94ab-65fdd4beb5ef") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Author", b =>
+            modelBuilder.Entity("Repository.Entities.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,9 +70,14 @@ namespace MusicPlayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new { Id = 1, AuthorName = "Viruss", CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("3b5b0576-d0a4-43d9-a589-c22e2fa65fb4") },
+                        new { Id = 2, AuthorName = "Maroon5", CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("07c5de39-a5c2-4d0a-a3df-cdb2e40a33e8") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Genre", b =>
+            modelBuilder.Entity("Repository.Entities.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -86,9 +96,14 @@ namespace MusicPlayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new { Id = 1, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreName = "Việt Nam", ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("9c6fa301-2bce-432a-a020-9b8183150d05") },
+                        new { Id = 2, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreName = "US-UK", ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("9886e9b0-eda6-42f1-acb0-0c031ea11d68") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Singer", b =>
+            modelBuilder.Entity("Repository.Entities.Singer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -107,9 +122,14 @@ namespace MusicPlayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Singers");
+
+                    b.HasData(
+                        new { Id = 1, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), SingerName = "Justatee", UniqueId = new Guid("bb7bd508-b781-45fe-bc18-57e3acc87ec6") },
+                        new { Id = 2, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), SingerName = "Maroon5", UniqueId = new Guid("089bb5de-3923-4fe3-8de2-e18295f285cd") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Song", b =>
+            modelBuilder.Entity("Repository.Entities.Song", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -150,15 +170,18 @@ namespace MusicPlayer.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Songs");
+
+                    b.HasData(
+                        new { Id = 1, AuthorId = 1, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), SingerId = 1, SongName = "Thằng điên", UniqueId = new Guid("14c90a34-ae92-4a79-a5d4-58ce4caed6c7"), UserId = 1 },
+                        new { Id = 2, AuthorId = 2, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 2, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), SingerId = 2, SongName = "Girl like you", UniqueId = new Guid("cd1943ae-ff79-4938-aac6-512cebc7b844"), UserId = 2 }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.SongAlbum", b =>
+            modelBuilder.Entity("Repository.Entities.SongAlbum", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<int>("AlbumId");
+
+                    b.Property<int>("SongId");
 
                     b.Property<DateTime>("CreatedDate");
 
@@ -166,20 +189,21 @@ namespace MusicPlayer.Migrations
 
                     b.Property<DateTime>("ModifiedDate");
 
-                    b.Property<int>("SongId");
-
                     b.Property<Guid>("UniqueId");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("AlbumId");
+                    b.HasKey("AlbumId", "SongId");
 
                     b.HasIndex("SongId");
 
                     b.ToTable("SongAlbums");
+
+                    b.HasData(
+                        new { AlbumId = 1, SongId = 1, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("6b06fdea-0267-46ae-b62c-4390f526fa06") },
+                        new { AlbumId = 2, SongId = 2, CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), UniqueId = new Guid("5155f6df-5f88-4ba0-803c-f2d167cac464") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.User", b =>
+            modelBuilder.Entity("Repository.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -208,47 +232,52 @@ namespace MusicPlayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new { Id = 1, BirthDay = new DateTime(2018, 10, 20, 20, 20, 36, 284, DateTimeKind.Local), CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Gender = true, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Name = "Comi", UniqueId = new Guid("28284fba-a478-4b4d-a779-95d758fa220b") },
+                        new { Id = 2, BirthDay = new DateTime(2018, 10, 20, 20, 20, 36, 285, DateTimeKind.Local), CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Gender = true, ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Name = "Shiba", UniqueId = new Guid("585a1683-8197-413c-b852-17ef12e8fd21") }
+                    );
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Album", b =>
+            modelBuilder.Entity("Repository.Entities.Album", b =>
                 {
-                    b.HasOne("MusicPlayer.Data.Entities.Author", "Author")
+                    b.HasOne("Repository.Entities.Author", "Author")
                         .WithMany("Albums")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.Song", b =>
+            modelBuilder.Entity("Repository.Entities.Song", b =>
                 {
-                    b.HasOne("MusicPlayer.Data.Entities.Author", "Author")
+                    b.HasOne("Repository.Entities.Author", "Author")
                         .WithMany("Songs")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MusicPlayer.Data.Entities.Genre", "Genre")
+                    b.HasOne("Repository.Entities.Genre", "Genre")
                         .WithMany("Songs")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MusicPlayer.Data.Entities.Singer", "Singer")
+                    b.HasOne("Repository.Entities.Singer", "Singer")
                         .WithMany("Songs")
                         .HasForeignKey("SingerId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MusicPlayer.Data.Entities.User", "User")
+                    b.HasOne("Repository.Entities.User", "User")
                         .WithMany("Songs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("MusicPlayer.Data.Entities.SongAlbum", b =>
+            modelBuilder.Entity("Repository.Entities.SongAlbum", b =>
                 {
-                    b.HasOne("MusicPlayer.Data.Entities.Album", "Album")
+                    b.HasOne("Repository.Entities.Album", "Album")
                         .WithMany("SongAlbums")
                         .HasForeignKey("AlbumId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MusicPlayer.Data.Entities.Song", "Song")
+                    b.HasOne("Repository.Entities.Song", "Song")
                         .WithMany("SongAlbums")
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Cascade);

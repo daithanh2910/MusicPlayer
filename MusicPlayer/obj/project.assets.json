@@ -4361,6 +4361,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EntityFramework": "6.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
       }
     }
   },
@@ -11559,6 +11572,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repository/Repository.csproj",
+      "msbuildProject": "../Repository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11566,7 +11584,8 @@
       "EntityFramework >= 6.2.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Authentication.AzureADB2C.UI >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11576,9 +11595,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\music\\MusicPlayer\\MusicPlayer.csproj",
-      "projectName": "MusicPlayer",
-      "projectPath": "C:\\Users\\User\\Desktop\\music\\MusicPlayer\\MusicPlayer.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\music\\MusicPlayer\\WebApplication.csproj",
+      "projectName": "WebApplication",
+      "projectPath": "C:\\Users\\User\\Desktop\\music\\MusicPlayer\\WebApplication.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\music\\MusicPlayer\\obj\\",
       "projectStyle": "PackageReference",
@@ -11598,7 +11617,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\music\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\music\\Repository\\Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
