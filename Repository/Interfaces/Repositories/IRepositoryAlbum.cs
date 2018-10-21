@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Repository.Interfaces.Repositories
 {
-    public interface IRepositoryAlbum<T> :IRepository<T> where T : Entity
+    public interface IRepositoryAlbum 
     {
+
     }
 }
