@@ -12,5 +12,7 @@ namespace Repository.Entities
         public string Phone { get; set; }
         public string Password { get; set; }
         public virtual ICollection<Song> Songs { get; set; }
+        public virtual ICollection<PlayList> PlayLists { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

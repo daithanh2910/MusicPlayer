@@ -17,6 +17,10 @@ namespace Repository
         public DbSet<Song> Songs { get; set; }
         public DbSet<SongAlbum> SongAlbums { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<PlayList> PlayLists { get; set; }
+        public DbSet<Role> Roles { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

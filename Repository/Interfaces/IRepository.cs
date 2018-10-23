@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Repository.Interfaces
 {
-    public interface IRepository<T> where T : Entity
+    public interface IRepository<T> where T : IEntity
     {
         void Create(T entity);
 

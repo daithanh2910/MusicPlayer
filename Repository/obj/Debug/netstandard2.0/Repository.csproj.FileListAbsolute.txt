@@ -11,4 +11,3 @@ C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.cspro
 C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Repository.pdb
 C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.dll
 C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.pdb
-C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache

@@ -10,6 +10,7 @@ namespace Repository.Entities
         public int SingerId { get; set; }
         public int AuthorId { get; set; }
         public int GenreId { get; set; }
+        public int PlayListId { get; set; }
         public string PhotoPath { get; set; }
         public string Description { get; set; }
         public virtual User User { get; set; }
@@ -20,5 +21,6 @@ namespace Repository.Entities
 
         public virtual Singer Singer { get; set; }
         public virtual ICollection<SongAlbum> SongAlbums { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
