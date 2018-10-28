@@ -21,8 +21,8 @@ namespace Repository
                 new Singer { Id = 2, SingerName = "Maroon5", UniqueId = Guid.NewGuid() }
             );
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, Name = "Comi", BirthDay = DateTime.Now, Gender = true, UniqueId = Guid.NewGuid() },
-                new User { Id = 2, Name = "Shiba", BirthDay = DateTime.Now, Gender = true, UniqueId = Guid.NewGuid() }
+                new User { Id = 1, Name = "Comi", Username = "comitieutu", Email = "comi@gamil.com", BirthDay = DateTime.Now, Gender = true, UniqueId = Guid.NewGuid() },
+                new User { Id = 2, Name = "Shiba", Username = "shibashiba", Email = "shiba@gmail.com", BirthDay = DateTime.Now, Gender = true, UniqueId = Guid.NewGuid() }
             );
             modelBuilder.Entity<Song>().HasData(
                 new Song { Id = 1, SongName = "Thằng điên", UserId = 1, SingerId = 1, AuthorId = 1, GenreId = 1, UniqueId = Guid.NewGuid() },

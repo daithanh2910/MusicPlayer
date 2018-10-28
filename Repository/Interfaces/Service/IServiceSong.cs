@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Repository.Interfaces.Repositories;
 
 namespace Repository.Interfaces.Service
 {
-    public interface IServiceSong
+    public interface IServiceSong : ServiceBase
     {
+        IRepositorySong RepositorySong { get; }
     }
 }

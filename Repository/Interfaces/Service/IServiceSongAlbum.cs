@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Repository.Interfaces.Service
+﻿namespace Repository.Interfaces.Service
 {
-    public interface IServiceSongAlbum
+    public interface IServiceSongAlbum : ServiceBase
     {
     }
 }

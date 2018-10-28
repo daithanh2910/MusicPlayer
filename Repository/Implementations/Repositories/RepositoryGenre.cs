@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Repository.Interfaces.Repositories;
 
 namespace Repository.Implementations.Repositories
 {
-    public class RepositoryGenre
+    public class RepositoryGenre : IRepositoryGenre
     {
+        private AppDbContext _context;
+
+        public RepositoryGenre(AppDbContext context)
+        {
+            _context = context;
+        }
     }
 }

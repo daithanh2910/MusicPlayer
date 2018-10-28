@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Repository.Interfaces.Service;
 
 namespace Repository.Implementations.Service
 {
-    public class ServiceGenre
+    public class ServiceGenre : IServiceGenre
     {
+        public void Commit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Refresh()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

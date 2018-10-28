@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Repository.Interfaces.Repositories;
 
 namespace Repository.Implementations.Repositories
 {
-    public class ServiceSong
+    public class RepositorySong : IRepositorySong
     {
+        private AppDbContext _context;
+
+        public RepositorySong(AppDbContext context)
+        {
+            _context = context;
+        }
     }
 }

@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Repository.Interfaces.Repositories;
 
 namespace Repository.Implementations.Repositories
 {
-    public class ServiceSinger
+    public class RepositorySinger : IRepositorySinger
     {
+        private AppDbContext _context;
+
+        public RepositorySinger(AppDbContext context)
+        {
+            _context = context;
+        }
     }
 }

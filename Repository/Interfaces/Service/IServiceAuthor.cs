@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Repository.Interfaces.Service
+﻿namespace Repository.Interfaces.Service
 {
-    public interface IServiceAuthor
+    public interface IServiceAuthor : ServiceBase
     {
     }
 }
