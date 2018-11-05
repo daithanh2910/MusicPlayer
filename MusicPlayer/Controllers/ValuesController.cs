@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Repository;
 
 namespace MusicPlayer.Controllers
 {
@@ -11,6 +8,12 @@ namespace MusicPlayer.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public ValuesController(AppDbContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

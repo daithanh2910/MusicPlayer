@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Repository.deps.json
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Repository.dll
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.csproj.CopyComplete
+C:\Users\User\Desktop\music\Repository\bin\Debug\netstandard2.0\Repository.pdb
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.dll
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.pdb
+C:\Users\User\Desktop\music\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache

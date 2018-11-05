@@ -1,0 +1,8 @@
+{
+  "AppSettings": {
+    "Secret": "MusicPlayerCreatedByThanhCongC1611L112018"
+  },
+  "ConnectionStrings": {
+    "MusicPlayerConnectionString": "server=(localdb)\\ProjectsV13;Database=MusicPlayer; Integrated Security=true; MultipleActiveResultSets = true;"
+  }
+}
